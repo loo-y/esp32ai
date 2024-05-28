@@ -25,3 +25,40 @@ ESP32-S3-DevKitC-1
 
 7. 当烧录完成后，需要将 usb 转为连接 左边的直通 type-c 接口，打开 Serial Monitor， 此时可用看到 setup 和 loop 的执行结果。
 
+### Max98357
+
+<img src="public/images/max98357.png" width="500" />
+<br >
+
+|接口|定义|
+|--|--|
+|VCC|输入电源DC2.5V-5.5V|
+|GND|接地|
+|SD|关机和频道选择|
+|GAIN|增益和频道选择|
+|DIN|数字输入信号|
+|BCLK|I2S接口的串行接口输出|
+|LRC|I2S与LJ模式的左右时钟，同步时钟用于TDM模式|
+
+#### 与 esp32s3 连线
+|max98357|esp32s3|
+|--|--|
+|VCC|3.3V|
+|GND|GND|
+|SD|无|
+|GAIN|无|
+|DIN|GPIO18|
+|BCLK|GPIO17|
+|LRC|GPIO16|
+
+
+### INMP441 麦克风
+#### 与 esp32s3 连线
+|INMP441|esp32s3|
+|--|--|
+|SCK|GPIO7|
+|WS|GPIO6|
+|L/R|GPIO4|
+|SD|无|
+|VCC|3.3V|
+|GND|GND|
