@@ -8,7 +8,7 @@
 // WS
 #define I2S_MICROPHONE_WS        6
 // SD
-#define I2S_MICROPHONE_DATA      4
+#define I2S_MICROPHONE_DATA      5
 
 // max98357
 // BCLK

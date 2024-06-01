@@ -14,6 +14,7 @@
 #define RECORD_TIME 10 // 录音时间 (秒)
 #define FILE_NAME "/recording.raw" // 保存文件名
 
+const int bufferSize = 128;
 // I2S 配置
 i2s_config_t i2s_mic_config = {
   .mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_RX),
@@ -115,7 +116,7 @@ void recordAudio() {
     return;
   }
 
-  const int bufferSize = 1024;
+  // const int bufferSize = 512;
   int16_t i2s_buffer[bufferSize];
   size_t bytes_read;
 
@@ -141,7 +142,7 @@ void playAudio() {
     return;
   }
 
-  const int bufferSize = 1024;
+  // const int bufferSize = 512;
   int16_t i2s_buffer[bufferSize];
   size_t bytes_written;
 

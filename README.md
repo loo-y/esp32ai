@@ -48,6 +48,8 @@ ESP32-S3-DevKitC-1
   }
 ```
 
+9. INMP441 只有杂声的原因是，L/R没有接入电源！！ L/R 需要接入 3.3v
+
 ### Max98357
 
 <img src="public/images/max98357.png" width="500" />
@@ -81,7 +83,7 @@ ESP32-S3-DevKitC-1
 |--|--|
 |SCK|GPIO7|
 |WS|GPIO6|
-|L/R|GPIO4|
-|SD|无|
+|L/R|3.3V|
+|SD|GPIO5|
 |VCC|3.3V|
 |GND|GND|

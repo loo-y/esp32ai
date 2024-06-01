@@ -4,7 +4,7 @@
 
 #define INMP441_WS 6
 #define INMP441_SCK 7
-#define INMP441_SD 4
+#define INMP441_SD 5
 
 
 
