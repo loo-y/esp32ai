@@ -37,16 +37,17 @@ i2s_config_t i2s_config = {
 i2s_pin_config_t i2s_mic_pin_config = {
   .bck_io_num = I2S_MICROPHONE_BCLK,
   .ws_io_num = I2S_MICROPHONE_WS,
-  .data_in_num = I2S_MICROPHONE_DATA,
-  .data_out_num = I2S_PIN_NO_CHANGE
+  .data_out_num = I2S_PIN_NO_CHANGE,
+  .data_in_num = I2S_MICROPHONE_DATA
+
 };
 
 // I2S 扬声器引脚配置
 i2s_pin_config_t i2s_speaker_pin_config = {
   .bck_io_num = I2S_SPEAKER_BCLK,
   .ws_io_num = I2S_SPEAKER_WS,
-  .data_in_num = I2S_PIN_NO_CHANGE,
-  .data_out_num = I2S_SPEAKER_DATA
+  .data_out_num = I2S_SPEAKER_DATA,
+  .data_in_num = I2S_PIN_NO_CHANGE
 };
 
 void setup() {
