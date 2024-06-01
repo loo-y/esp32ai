@@ -25,6 +25,29 @@ ESP32-S3-DevKitC-1
 
 7. 当烧录完成后，需要将 usb 转为连接 左边的直通 type-c 接口，打开 Serial Monitor， 此时可用看到 setup 和 loop 的执行结果。
 
+8. 如果碰到 ```SPIFFS: mount failed, -10025``` 的问题，需要在 SPIFF初始化的时候格式化，并且 Partition Schema 需要选择 SPIFFS 的格式<br >
+```c++
+  if (!SPIFFS.begin())
+  {
+  	// 初始化失败时处理
+    Serial.println("SPIFFS-An error occurred while mounting SPIFFS");
+
+    // 格式化SPIFFS分区
+    if (SPIFFS.format())
+    {
+      // 格式化成功
+      Serial.println("SPIFFS partition formatted successfully");
+      // 重启
+      ESP.restart();
+    }
+    else
+    {
+      Serial.println("SPIFFS partition format failed");
+    }
+    return;
+  }
+```
+
 ### Max98357
 
 <img src="public/images/max98357.png" width="500" />
